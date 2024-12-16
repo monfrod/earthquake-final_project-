@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingViewController" customModule="Final_project" customModuleProvider="target">
+            <connections>
+                <outlet property="collView" destination="wko-KY-L7i" id="FZo-Li-eFg"/>
+                <outlet property="nextButton" destination="iQu-tR-wE3" id="bc5-aN-fwW"/>
+                <outlet property="pageControl" destination="nNr-ct-dGR" id="rep-Uj-Nac"/>
+                <outlet property="skipButton" destination="9pV-6G-Hyp" id="BeD-YZ-ewg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wko-KY-L7i">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SBW-hd-akg">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pV-6G-Hyp">
+                    <rect key="frame" x="-10" y="672" width="133.33333333333334" height="55"/>
+                    <color key="backgroundColor" red="1" green="0.64391062109999997" blue="0.60846854520000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="tj4-Mh-hHX"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Skip">
+                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="skipButtonPressed:" destination="-1" eventType="touchUpInside" id="ehm-RH-9ON"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQu-tR-wE3">
+                    <rect key="frame" x="243" y="667" width="160" height="65"/>
+                    <color key="backgroundColor" name="custom1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="VeE-Qc-UUD"/>
+                        <constraint firstAttribute="width" constant="160" id="vSN-Bi-RXe"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Next">
+                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="NextButtonPressed:" destination="-1" eventType="touchUpInside" id="Iki-DP-4aH"/>
+                    </connections>
+                </button>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="nNr-ct-dGR">
+                    <rect key="frame" x="0.0" y="616" width="393" height="26"/>
+                </pageControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W98-5V-8mW">
+                    <rect key="frame" x="122.66666666666669" y="74" width="148" height="27.666666666666671"/>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nNr-ct-dGR" secondAttribute="trailing" id="4Nt-jo-hnS"/>
+                <constraint firstItem="nNr-ct-dGR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4TM-5K-mbK"/>
+                <constraint firstItem="wko-KY-L7i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DiM-xb-lP4"/>
+                <constraint firstItem="W98-5V-8mW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="Mgr-pp-w86"/>
+                <constraint firstItem="wko-KY-L7i" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QKK-ue-oPG"/>
+                <constraint firstItem="W98-5V-8mW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eJY-QE-Ktc"/>
+                <constraint firstItem="iQu-tR-wE3" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="10" id="gEs-A8-gCB"/>
+                <constraint firstAttribute="bottom" secondItem="wko-KY-L7i" secondAttribute="bottom" id="jQD-DQ-Aak"/>
+                <constraint firstItem="iQu-tR-wE3" firstAttribute="top" secondItem="nNr-ct-dGR" secondAttribute="bottom" constant="25" id="l6I-CK-Xz4"/>
+                <constraint firstItem="9pV-6G-Hyp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="-10" id="m3F-2f-E8v"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9pV-6G-Hyp" secondAttribute="bottom" constant="91" id="mxT-6J-ohM"/>
+                <constraint firstItem="iQu-tR-wE3" firstAttribute="width" secondItem="9pV-6G-Hyp" secondAttribute="width" multiplier="1.2" id="qIQ-d6-8OB"/>
+                <constraint firstItem="iQu-tR-wE3" firstAttribute="centerY" secondItem="9pV-6G-Hyp" secondAttribute="centerY" id="vCK-gb-360"/>
+                <constraint firstItem="wko-KY-L7i" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="w1o-I9-ek2"/>
+            </constraints>
+            <point key="canvasLocation" x="90.839694656488547" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="custom1">
+            <color red="1" green="0.74382321931875828" blue="0.42240235996637676" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
