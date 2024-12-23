@@ -14,7 +14,7 @@ class MapViewController: UIViewController {
     
     var earthquakeData: EarthquakeResponse?
     let locationManager = CLLocationManager()
-    let earthquakeManager = EarthquakeManager()
+    let earthquakeManager = AFManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()

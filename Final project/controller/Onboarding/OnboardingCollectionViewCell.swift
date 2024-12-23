@@ -8,11 +8,16 @@
 import UIKit
 
 class OnboardingCollectionViewCell: UICollectionViewCell {
+    
+    var nameImage: String = "" {
+        didSet {
+            imageView.image = UIImage(named: nameImage)
+        }
+    }
 
     @IBOutlet weak var imageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
 }

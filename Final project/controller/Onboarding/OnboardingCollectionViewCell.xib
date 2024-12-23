@@ -16,19 +16,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q2N-yn-eAQ">
-                        <rect key="frame" x="1" y="84" width="391" height="522"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="Q2N-yn-eAQ">
+                        <rect key="frame" x="0.0" y="109" width="393" height="522"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="391" id="ayk-CC-G65"/>
-                            <constraint firstAttribute="height" constant="522" id="guh-Mb-twK"/>
+                            <constraint firstAttribute="width" constant="393" id="WKc-Ek-Lq9"/>
+                            <constraint firstAttribute="height" constant="522" id="rRh-sY-eEv"/>
                         </constraints>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Q2N-yn-eAQ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="5m5-eh-HNx"/>
-                <constraint firstItem="Q2N-yn-eAQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="84" id="zNP-yg-ZoA"/>
+                <constraint firstItem="Q2N-yn-eAQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VjR-KI-w7D"/>
+                <constraint firstItem="Q2N-yn-eAQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="109" id="dbq-vC-rwt"/>
+                <constraint firstAttribute="trailing" secondItem="Q2N-yn-eAQ" secondAttribute="trailing" id="iZc-Zu-vyG"/>
+                <constraint firstAttribute="bottom" secondItem="Q2N-yn-eAQ" secondAttribute="bottom" constant="221" id="mbi-aH-Ih8"/>
             </constraints>
             <connections>
                 <outlet property="imageView" destination="Q2N-yn-eAQ" id="hU7-vL-CBm"/>
@@ -36,4 +39,7 @@
             <point key="canvasLocation" x="90.839694656488547" y="19.718309859154932"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="image1" width="816" height="1056"/>
+    </resources>
 </document>

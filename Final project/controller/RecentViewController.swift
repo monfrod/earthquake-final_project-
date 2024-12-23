@@ -10,7 +10,7 @@ import UIKit
 class RecentViewController: UIViewController {
   
     var earthquakeData: EarthquakeResponse?
-    let earthquakeManager = EarthquakeManager()
+    let earthquakeManager = AFManager()
  
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,7 +40,10 @@ class RecentViewController: UIViewController {
         return formattedDate
     }
 
-
+    @IBAction func GoInstructionButton(_ sender: Any) {
+        view.window?.rootViewController = OnboardingViewController()
+    }
+    
 }
 
 
@@ -67,6 +70,8 @@ extension RecentViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         if let data = earthquakeData?.features[indexPath.row] {

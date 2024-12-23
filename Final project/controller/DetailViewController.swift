@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var magnitudeLabel: UILabel!
     @IBOutlet weak var depthLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+
     
     var pinCoordinateLong: Double = 0
     var pinCoordinateLat: Double = 0
